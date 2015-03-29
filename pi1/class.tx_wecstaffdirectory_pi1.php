@@ -22,7 +22,9 @@
 *
 * This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
-require_once(PATH_tslib.'class.tslib_pibase.php');
+if (t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version) < '4006000') {
+    require_once(PATH_tslib.'class.tslib_pibase.php');
+}    
 /**
  * Plugin 'WEC Staff Directory ' for the 'wec_staffdirectory' extension.
  *
